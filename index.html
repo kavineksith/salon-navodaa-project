@@ -224,11 +224,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600&display=swap"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap">
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600&display=swap">
     </noscript>
 
     <!-- DNS Prefetch -->
@@ -261,343 +261,329 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
 </head>
 
 <body>
     <!-- Header -->
-    <header class="header" id="header">
-        <nav class="nav-container">
-            <a href="#home" class="logo">
+    <header class="header" id="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            <a href="#home" class="logo" aria-label="Salon Navodaa Home">
                 <div class="logo-icon pulse">
                     <img src="./assets/images/white-logo.png" alt="Salon Navodaa Logo">
                 </div>
                 <div class="logo-text">Salon Navodaa</div>
             </a>
 
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link active" data-section="home">Home</a>
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li class="nav-item" role="none">
+                    <a href="#home" class="nav-link active" role="menuitem" data-section="home">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#services" class="nav-link" data-section="services">Services</a>
+                <li class="nav-item" role="none">
+                    <a href="#services" class="nav-link" role="menuitem" data-section="services">Services</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link" data-section="about">About</a>
+                <li class="nav-item" role="none">
+                    <a href="#about" class="nav-link" role="menuitem" data-section="about">About</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+                <li class="nav-item" role="none">
+                    <a href="#contact" class="nav-link" role="menuitem" data-section="contact">Contact</a>
                 </li>
             </ul>
 
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="navMenu">
+                <div class="hamburger" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span>
                 </div>
             </button>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-subtitle">Premium Beauty Experience</div>
-                <h1 class="hero-title">
-                    Transform Your <span class="accent">Natural Beauty</span>
-                </h1>
-                <p class="hero-description">
-                    Experience luxury beauty and wellness treatments in our serene, professional environment. Our
-                    certified experts combine traditional techniques with modern innovations to deliver exceptional
-                    results.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#" class="btn-primary" id="bookAppointment">
-                        <i class="fas fa-calendar-check"></i>
-                        Book Appointment
-                    </a>
-                    <a href="#services" class="btn-secondary">
-                        <i class="fas fa-arrow-down"></i>
-                        Explore Services
-                    </a>
+    <main id="main-content" role="main">
+        <section class="hero" id="home" aria-label="Hero section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-subtitle">Premium Beauty Experience</div>
+                    <h1 class="hero-title">
+                        Transform Your <span class="accent">Natural Beauty</span>
+                    </h1>
+                    <p class="hero-description">
+                        Experience luxury beauty and wellness treatments in our serene, professional environment. Our
+                        certified experts combine traditional techniques with modern innovations to deliver exceptional
+                        results.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn-primary" id="bookAppointment"
+                            aria-label="Book an appointment at Salon Navodaa">
+                            <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                            Book Appointment
+                        </a>
+                        <a href="#services" class="btn-secondary" aria-label="Explore Salon Navodaa services">
+                            <i class="fas fa-arrow-down" aria-hidden="true"></i>
+                            Explore Services
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image" aria-hidden="true">
+                    <div class="hero-image-container">
+                        <div class="hero-image-main">
+                            <img src="./assets/images/hero-image.jpeg" alt="Luxury beauty and wellness treatments salon" loading="lazy">
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <div class="stat-number">100+</div>
+                                <div class="stat-label">Happy Clients</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">2+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">12+</div>
+                                <div class="stat-label">Services</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="hero-image">
-                <div class="hero-image-container">
-                    <div class="hero-image-main">
-                        <i class="fas fa-user-friends"></i>
+        <!-- Services Section -->
+        <section class="services" id="services" aria-labelledby="services-heading">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-subtitle">Our Expertise</div>
+                    <h2 class="section-title" id="services-heading">Premium Beauty Services</h2>
+                    <p class="section-description">
+                        From rejuvenating beauty treatments to expert hair styling, we offer a comprehensive range of
+                        professional beauty services designed to enhance your natural radiance.
+                    </p>
+                </div>
+
+                <div class="services-grid" role="list">
+                    <div class="service-card" role="listitem">
+                        <div class="service-icon" aria-hidden="true">
+                            <i class="fas fa-feather"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Professional Pedicure</h3>
+                            <p class="service-description">Revitalize tired feet with our luxurious pedicure treatment
+                                including
+                                nail shaping, cuticle care, exfoliation, and moisturizing massage.</p>
+                        </div>
+                        <div class="service-price">
+                            <button class="book-service" data-service="Pedicure"
+                                aria-label="Book Professional Pedicure service">Book Now</button>
+                        </div>
                     </div>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <div class="stat-number">100+</div>
-                            <div class="stat-label">Happy Clients</div>
+
+                    <div class="service-card" role="listitem">
+                        <div class="service-icon" aria-hidden="true">
+                            <i class="fas fa-seedling"></i>
                         </div>
-                        <div class="stat">
-                            <div class="stat-number">2+</div>
-                            <div class="stat-label">Years Experience</div>
+                        <div class="service-content">
+                            <h3 class="service-title">Hair Growth Treatment</h3>
+                            <p class="service-description">Stimulate hair follicles and promote healthy growth with our
+                                natural, nutrient-rich hair growth therapy for thicker, stronger hair.</p>
                         </div>
-                        <div class="stat">
-                            <div class="stat-number">12+</div>
-                            <div class="stat-label">Services</div>
+                        <div class="service-price">
+                            <button class="book-service" data-service="Hair Growth Treatment"
+                                aria-label="Book Hair Growth Treatment service">Book Now</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card" role="listitem">
+                        <div class="service-icon" aria-hidden="true">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Skin Glow Treatment</h3>
+                            <p class="service-description">Achieve radiant, luminous skin with our specialized glow
+                                treatment
+                                that brightens, hydrates, and revitalizes your complexion.</p>
+                        </div>
+                        <div class="service-price">
+                            <button class="book-service" data-service="Skin Glow Treatment"
+                                aria-label="Book Skin Glow Treatment service">Book Now</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card" role="listitem">
+                        <div class="service-icon" aria-hidden="true">
+                            <i class="fas fa-cloud-moon"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Body Relaxing Therapy</h3>
+                            <p class="service-description">Release tension and restore balance with our full-body
+                                relaxation
+                                therapy combining massage, aromatherapy, and stress-relief techniques.</p>
+                        </div>
+                        <div class="service-price">
+                            <button class="book-service" data-service="Body Relaxing Therapy"
+                                aria-label="Book Body Relaxing Therapy service">Book Now</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card" role="listitem">
+                        <div class="service-icon" aria-hidden="true">
+                            <i class="fas fa-droplet"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Hydra Facial Treatment</h3>
+                            <p class="service-description">Advanced facial treatment that cleanses, exfoliates,
+                                extracts, and
+                                hydrates the skin for immediate glow and long-term skin health.</p>
+                        </div>
+                        <div class="service-price">
+                            <button class="book-service" data-service="Hydra Facial Treatment"
+                                aria-label="Book Hydra Facial Treatment service">Book Now</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card" role="listitem">
+                        <div class="service-icon" aria-hidden="true">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Body Polishing Treatment</h3>
+                            <p class="service-description">Experience silky smooth skin with our full-body polishing
+                                treatment
+                                that exfoliates, nourishes, and leaves your skin radiant and refreshed.</p>
+                        </div>
+                        <div class="service-price">
+                            <button class="book-service" data-service="Body Polishing Treatment"
+                                aria-label="Book Body Polishing Treatment service">Book Now</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-subtitle">Our Expertise</div>
-                <h2 class="section-title">Premium Beauty Services</h2>
-                <p class="section-description">
-                    From rejuvenating beauty treatments to expert hair styling, we offer a comprehensive range of
-                    professional beauty services designed to enhance your natural radiance.
-                </p>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-feather"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Professional Pedicure</h3>
-                        <p class="service-description">Revitalize tired feet with our luxurious pedicure treatment
-                            including
-                            nail shaping, cuticle care, exfoliation, and moisturizing massage.</p>
-                    </div>
-                    <div class="service-price">
-                        <span class="price"></span>
-                        <button class="book-service" data-service="Pedicure">Book Now</button>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Hair Growth Treatment</h3>
-                        <p class="service-description">Stimulate hair follicles and promote healthy growth with our
-                            natural,
-                            nutrient-rich hair growth therapy for thicker, stronger hair.</p>
-                    </div>
-                    <div class="service-price">
-                        <span class="price"></span>
-                        <button class="book-service" data-service="Hair Growth Treatment">Book Now</button>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Skin Glow Treatment</h3>
-                        <p class="service-description">Achieve radiant, luminous skin with our specialized glow
-                            treatment
-                            that brightens, hydrates, and revitalizes your complexion.</p>
-                    </div>
-                    <div class="service-price">
-                        <span class="price"></span>
-                        <button class="book-service" data-service="Skin Glow Treatment">Book Now</button>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud-moon"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Body Relaxing Therapy</h3>
-                        <p class="service-description">Release tension and restore balance with our full-body relaxation
-                            therapy combining massage, aromatherapy, and stress-relief techniques.</p>
-                    </div>
-                    <div class="service-price">
-                        <span class="price"></span>
-                        <button class="book-service" data-service="Body Relaxing Therapy">Book Now</button>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-droplet"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Hydra Facial Treatment</h3>
-                        <p class="service-description">Advanced facial treatment that cleanses, exfoliates, extracts,
+        <!-- About Section -->
+        <section class="about" id="about" aria-labelledby="about-heading">
+            <div class="container">
+                <div class="about-container">
+                    <div class="about-content">
+                        <div class="section-subtitle">Our Story</div>
+                        <h2 class="section-title" id="about-heading">Professional Excellence Since 2019</h2>
+                        <p class="about-text">
+                            At Salon Navodaa, we believe beauty is an art form that deserves professional expertise and
+                            personal attention. Our team of certified beauty professionals brings years of experience
                             and
-                            hydrates the skin for immediate glow and long-term skin health.</p>
-                    </div>
-                    <div class="service-price">
-                        <span class="price"></span>
-                        <button class="book-service" data-service="Hydra Facial Treatment">Book Now</button>
-                    </div>
-                </div>
+                            continuous training to deliver exceptional results in a luxurious, relaxing environment.
+                        </p>
+                        <p class="about-text">
+                            We use only premium products and cutting-edge techniques to ensure every client leaves
+                            feeling
+                            confident, refreshed, and beautifully transformed. Your satisfaction and wellbeing are our
+                            top
+                            priorities.
+                        </p>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-spa"></i>
+                        <ul class="features-list">
+                            <li><i class="fas fa-certificate" aria-hidden="true"></i><span>NVQ Level 4 Certified
+                                    Professionals</span></li>
+                            <li><i class="fas fa-award" aria-hidden="true"></i><span>2+ Years Industry Experience</span>
+                            </li>
+                            <li><i class="fas fa-leaf" aria-hidden="true"></i><span>Premium Natural & Organic
+                                    Products</span></li>
+                            <li><i class="fas fa-shield-alt" aria-hidden="true"></i><span>Strict Hygiene & Safety
+                                    Standards</span></li>
+                            <li><i class="fas fa-heart" aria-hidden="true"></i><span>Personalized Treatment Plans</span>
+                            </li>
+                        </ul>
+
+                        <a href="#contact" class="btn-primary" aria-label="Get in touch with Salon Navodaa">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            Get In Touch
+                        </a>
                     </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Body Polishing Treatment</h3>
-                        <p class="service-description">Experience silky smooth skin with our full-body polishing
-                            treatment
-                            that exfoliates, nourishes, and leaves your skin radiant and refreshed.</p>
-                    </div>
-                    <div class="service-price">
-                        <span class="price"></span>
-                        <button class="book-service" data-service="Body Polishing Treatment">Book Now</button>
+
+                    <div class="about-image">
+                        <div class="about-image-main" aria-hidden="true">
+                            <img src="./assets/images/about-image.jpeg" alt="Salon Navodaa Beauty Therapist at Work" loading="lazy">
+                        </div>
+                        <div class="experience-badge">
+                            <span class="experience-number">2+</span>
+                            <span class="experience-label">Years Excellence</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-container">
-                <div class="about-content">
-                    <div class="section-subtitle">Our Story</div>
-                    <h2 class="section-title">Professional Excellence Since 2019</h2>
-                    <p class="about-text">
-                        At Salon Navodaa, we believe beauty is an art form that deserves professional expertise and
-                        personal attention. Our team of certified beauty professionals brings years of experience and
-                        continuous training to deliver exceptional results in a luxurious, relaxing environment.
+        <!-- Contact Section -->
+        <section class="contact" id="contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-subtitle">Get In Touch</div>
+                    <h2 class="section-title" id="contact-heading">Visit Our Beauty Salon</h2>
+                    <p class="section-description">
+                        Ready to experience professional beauty treatments? Contact us to schedule your appointment or
+                        visit
+                        our salon in Gampaha.
                     </p>
-                    <p class="about-text">
-                        We use only premium products and cutting-edge techniques to ensure every client leaves feeling
-                        confident, refreshed, and beautifully transformed. Your satisfaction and wellbeing are our top
-                        priorities.
-                    </p>
-
-                    <ul class="features-list">
-                        <li>
-                            <i class="fas fa-certificate"></i>
-                            <span>NVQ Level 4 Certified Professionals</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-award"></i>
-                            <span>2+ Years Industry Experience</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-leaf"></i>
-                            <span>Premium Natural & Organic Products</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Strict Hygiene & Safety Standards</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-heart"></i>
-                            <span>Personalized Treatment Plans</span>
-                        </li>
-                    </ul>
-
-                    <a href="#contact" class="btn-primary">
-                        <i class="fas fa-phone"></i>
-                        Get In Touch
-                    </a>
                 </div>
 
-                <div class="about-image">
-                    <div class="about-image-main">
-                        <i class="fas fa-spa"></i>
-                    </div>
-                    <div class="experience-badge">
-                        <span class="experience-number">2+</span>
-                        <span class="experience-label">Years Excellence</span>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-details">
+                                <h4>Our Location</h4>
+                                <p>552/1/2, Colombo Rd, Gampaha, Western Province, Sri Lanka</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true"><i class="fas fa-phone"></i></div>
+                            <div class="contact-details">
+                                <h4>Call Us</h4>
+                                <p><a href="tel:+94703584172">+94 70 358 4172</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-details">
+                                <h4>Email Us</h4>
+                                <p><a href="mailto:navodasobaruu@gmail.com">navodasobaruu@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true"><i class="fas fa-clock"></i></div>
+                            <div class="contact-details">
+                                <h4>Opening Hours</h4>
+                                <p>Monday - Sunday: 7:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="link-custom" role="navigation" aria-label="Social media links">
+                            <a href="https://www.facebook.com/salonnavodaDN" class="social-link" target="_blank"
+                                aria-label="Visit our Facebook page">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://wa.me/+94703584172" class="social-link" target="_blank"
+                                aria-label="Chat with us on WhatsApp">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            </a>
+                            <a href="mailto:navodasobaruu@gmail.com" class="social-link" aria-label="Send us an email">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="tel:+94703584172" class="social-link" aria-label="Call us">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-subtitle">Get In Touch</div>
-                <h2 class="section-title">Visit Our Beauty Salon</h2>
-                <p class="section-description">
-                    Ready to experience professional beauty treatments? Contact us to schedule your appointment or visit
-                    our salon in Gampaha.
-                </p>
-            </div>
-
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Our Location</h4>
-                            <p>552/1/2, Colombo Rd, Gampaha, Western Province, Sri Lanka</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Call Us</h4>
-                            <p><a href="tel:+94703584172">+94 70 358 4172</a></p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email Us</h4>
-                            <p><a href="mailto:navodasobaruu@gmail.com">navodasobaruu@gmail.com</a></p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Opening Hours</h4>
-                            <p>Monday - Sunday: 7:00 AM - 5:00 PM</p>
-                        </div>
-                    </div>
-
-                    <div class="link-custom">
-                        <a href="https://www.facebook.com/salonnavodaDN" class="social-link" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://wa.me/+94703584172" class="social-link" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="mailto:navodasobaruu@gmail.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="tel:+94703584172" class="social-link">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -605,14 +591,16 @@
                     <p>Your premier destination for professional beauty and wellness treatments. We combine expertise,
                         luxury, and personalized care to help you look and feel your absolute best.</p>
                     <div class="social-links" style="margin-top: 1rem;">
-                        <a href="https://www.facebook.com/salonnavodaDN" class="social-link" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
+                        <a href="https://www.facebook.com/salonnavodaDN" class="social-link" target="_blank"
+                            aria-label="Visit our Facebook page">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
                         </a>
-                        <a href="https://wa.me/+94703584172" class="social-link" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/+94703584172" class="social-link" target="_blank"
+                            aria-label="Chat with us on WhatsApp">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
                         </a>
-                        <a href="mailto:navodasobaruu@gmail.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
+                        <a href="mailto:navodasobaruu@gmail.com" class="social-link" aria-label="Send us an email">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -651,34 +639,37 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Salon Navodaa. All rights reserved. | Designed with ❤️ for beauty & wellness</p>
+                <p id="footer-text">&copy; <span id="current-year"></span> Salon Navodaa. All rights reserved. | Crafted
+                    with ❤️ by Kavin Eksith</p>
             </div>
         </div>
     </footer>
 
     <!-- Booking Modal -->
-    <div class="modal" id="bookingModal">
+    <div class="modal" id="bookingModal" role="dialog" aria-labelledby="bookingModalTitle" aria-modal="true" hidden>
         <div class="modal-content">
-            <h3>Book Your Appointment</h3>
+            <h3 id="bookingModalTitle">Book Your Appointment</h3>
             <p>Ready to experience our professional beauty treatments? Choose your preferred way to get in touch with
                 us.</p>
             <div class="modal-buttons">
-                <button class="btn-primary" id="callNow">
-                    <i class="fas fa-phone"></i>
+                <button class="btn-primary" id="callNow" aria-label="Call Salon Navodaa">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
                     Call Now
                 </button>
-                <button class="btn-primary" id="whatsappNow" style="background: #25d366;">
-                    <i class="fab fa-whatsapp"></i>
+                <button class="btn-primary" id="whatsappNow" style="background: #25d366;" aria-label="Chat on WhatsApp">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
                     WhatsApp
                 </button>
-                <button class="btn-secondary" id="closeModal">Close</button>
+                <button class="btn-secondary" id="closeModal" aria-label="Close booking modal">Close</button>
             </div>
         </div>
     </div>
+
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
-        <i class="fas fa-arrow-up"></i>
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
+
     <script src="./assets/js/main.js" type="module"></script>
 </body>
 

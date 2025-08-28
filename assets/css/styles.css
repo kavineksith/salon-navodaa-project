@@ -1,21 +1,31 @@
 /* CSS Variables */
 :root {
-    --primary-gold: #D4AF37;
-    --primary-rose: #E8B4B8;
-    --deep-charcoal: #2C2C2C;
+    --primary-gold: #C9A227;
+    /* deeper, richer gold */
+    --primary-rose: #E6C9CB;
+    /* softer rose pink, less saturated */
+    --deep-charcoal: #1B1B1B;
     --soft-cream: #FAF8F5;
+    /* slightly warmer cream */
     --warm-white: #FFFFFF;
-    --accent-copper: #B87333;
-    --text-primary: #1A1A1A;
-    --text-secondary: #666666;
-    --text-muted: #999999;
+    --deep-charcoal: #1B1B1B;
+    /* deeper charcoal for luxury contrast */
+    --text-primary: #222222;
+    /* deeper gray instead of black */
+    --text-secondary: #555555;
+    /* softer mid-gray */
+    --text-muted: #888888;
+    --button-color: linear-gradient(135deg, #e7d38f 0%, #dfd813 100%);
+    /* gold button color */
     --shadow-soft: 0 5px 15px rgba(0, 0, 0, 0.08);
     --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.12);
     --shadow-strong: 0 20px 40px rgba(0, 0, 0, 0.15);
-    --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #F7DC6F 100%);
-    --gradient-rose: linear-gradient(135deg, #E8B4B8 0%, #F8D7DA 100%);
-    --font-primary: 'Playfair Display', serif;
-    --font-secondary: 'Inter', sans-serif;
+    --gradient-gold: linear-gradient(135deg, #c1a23d 0%, #F5D76E 100%);
+    --gradient-rose: linear-gradient(135deg, #E6C9CB 0%, #F9E1E3 100%);
+    --font-primary: "Montserrat", sans-serif;
+    /* elegant luxury serif */
+    --font-secondary: 'Poppins', sans-serif;
+    /* clean modern body font */
     --border-radius-sm: 8px;
     --border-radius-md: 12px;
     --border-radius-lg: 20px;
@@ -314,7 +324,7 @@ body {
 .hero-title {
     font-family: var(--font-primary);
     font-size: clamp(3rem, 5vw, 4.5rem);
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.2;
     margin-bottom: 1.5rem;
     color: var(--text-primary);
@@ -404,7 +414,6 @@ body {
     transform: translateY(-50%);
     width: 400px;
     height: 500px;
-    background: var(--gradient-rose);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-strong);
     display: flex;
@@ -412,6 +421,14 @@ body {
     justify-content: center;
     font-size: 120px;
     color: var(--warm-white);
+}
+
+.hero-image-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius-lg);
+    transition: var(--transition-fast);
 }
 
 .hero-stats {
@@ -474,7 +491,7 @@ body {
 .section-title {
     font-family: var(--font-primary);
     font-size: clamp(2.5rem, 4vw, 3.5rem);
-    font-weight: 300;
+    font-weight: 500;
     color: var(--text-primary);
     margin-bottom: 1rem;
 }
@@ -501,6 +518,14 @@ body {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    /* Stack content vertically */
+    justify-content: space-between;
+    /* Push price to bottom */
+    height: 420px;
+    /* Fixed height for all cards, adjust as needed */
 }
 
 .service-card::before {
@@ -540,7 +565,7 @@ body {
 .service-title {
     font-family: var(--font-primary);
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 1rem;
 }
@@ -548,6 +573,7 @@ body {
 .service-content {
     margin-bottom: 1rem;
     flex-grow: 1;
+    /* Take remaining space */
 }
 
 .service-description {
@@ -558,8 +584,11 @@ body {
 
 .service-price {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    /* Align button consistently */
     align-items: center;
+    margin-top: auto;
+    /* Ensures it sticks to the bottom */
 }
 
 .price {
@@ -571,7 +600,7 @@ body {
 .book-service {
     min-width: 100px;
     text-align: center;
-    background: var(--gradient-rose);
+    background: var(--button-color);
     color: var(--warm-white);
     border: none;
     padding: 8px 16px;
@@ -641,7 +670,6 @@ body {
     top: 0;
     width: 80%;
     height: 100%;
-    background: var(--gradient-rose);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-strong);
     display: flex;
@@ -649,6 +677,14 @@ body {
     justify-content: center;
     font-size: 100px;
     color: var(--warm-white);
+}
+
+.about-image-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius-lg);
+    transition: var(--transition-fast);
 }
 
 .experience-badge {
@@ -748,7 +784,7 @@ body {
 }
 
 .contact-details a:hover {
-    color: var(--accent-copper);
+    color: #e4b829;
 }
 
 .social-links {
@@ -823,15 +859,23 @@ body {
     transition: var(--transition-fast);
 }
 
-.footer-section a:hover {
-    color: var(--primary-gold);
-}
-
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 1rem;
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
+}
+
+/* Fade-in animation */
+#footer-text {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+#footer-text.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Modal Styles */
@@ -1480,94 +1524,6 @@ body.loaded {
     overflow-x: hidden;
 }
 
-/* Enhanced Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --text-primary: #F5F5F5;
-        --text-secondary: #CCCCCC;
-        --text-muted: #999999;
-        --soft-cream: #1A1A1A;
-        --warm-white: #2C2C2C;
-        --deep-charcoal: #0D0D0D;
-    }
-
-    ::-webkit-scrollbar-track {
-        background: var(--deep-charcoal);
-    }
-
-    html {
-        scrollbar-color: var(--primary-gold) var(--deep-charcoal);
-    }
-
-    /* Dark mode header/navbar */
-    .header {
-        background: rgba(26, 26, 26, 0.95);
-        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-    }
-
-    .header.scrolled {
-        background: rgba(26, 26, 26, 0.98);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Mobile menu dark mode */
-    .nav-menu {
-        background: linear-gradient(135deg,
-                rgba(26, 26, 26, 0.98) 0%,
-                rgba(20, 20, 20, 0.98) 100%);
-        backdrop-filter: blur(25px);
-        -webkit-backdrop-filter: blur(25px);
-    }
-
-    /* Logo and navigation text */
-    .logo-text,
-    .nav-link,
-    .mobile-toggle {
-        color: var(--text-primary);
-    }
-
-    .mobile-toggle .hamburger span {
-        background: var(--text-primary);
-    }
-
-    /* Nav link hover effects in dark mode */
-    .nav-link:hover {
-        color: var(--primary-gold);
-    }
-
-    /* Mobile nav link styling for dark mode */
-    .nav-link::before {
-        background: linear-gradient(135deg, var(--primary-gold), var(--accent-copper));
-    }
-
-    /* Hero section dark mode */
-    .hero {
-        background: linear-gradient(135deg, var(--soft-cream) 0%, #0F0F0F 100%);
-    }
-
-    /* Other sections dark mode */
-    .services {
-        background: var(--warm-white);
-    }
-
-    .about {
-        background: var(--soft-cream);
-    }
-
-    .contact {
-        background: var(--warm-white);
-    }
-
-    /* Cards and form elements */
-    .service-card,
-    .contact-item,
-    .hero-stats,
-    .experience-badge {
-        background: var(--warm-white);
-        color: var(--text-primary);
-    }
-}
-
 /* Contact items alignment for screens below 800px */
 @media (max-width: 800px) {
 
@@ -1644,9 +1600,12 @@ body.loaded {
 
     .contact-item {
         padding: 1.25rem;
-        flex-direction: row; /* Keep horizontal layout */
-        text-align: left; /* Align text to left */
-        align-items: flex-start; /* Align items to top */
+        flex-direction: row;
+        /* Keep horizontal layout */
+        text-align: left;
+        /* Align text to left */
+        align-items: flex-start;
+        /* Align items to top */
     }
 
     .contact-icon {
@@ -1664,7 +1623,7 @@ body.loaded {
         font-size: 18px;
     }
 
-    /* About section features list - block layout for mobile */ 
+    /* About section features list - block layout for mobile */
     .features-list {
         max-width: none;
         /* Remove max-width constraint */
