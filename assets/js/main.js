@@ -48,7 +48,7 @@ class ProfessionalSalonWebsite {
         document.getElementById('callNow').addEventListener('click', () => this.handleCall());
         document.getElementById('whatsappNow').addEventListener('click', () => this.handleWhatsApp());
         document.getElementById('closeModal').addEventListener('click', () => this.hideBookingModal());
-;
+        ;
 
         // Scroll events
         window.addEventListener('scroll', () => this.handleScroll());
@@ -316,12 +316,17 @@ class ProfessionalSalonWebsite {
     }
 }
 
+// Set current year dynamically
+document.getElementById('current-year').textContent = new Date().getFullYear();
+
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     new ProfessionalSalonWebsite();
 
     // Add loading animation
     document.body.classList.add('loaded');
+    const footerText = document.getElementById('footer-text');
+    footerText.classList.add('visible');
 });
 
 // Add slideInRight animation
